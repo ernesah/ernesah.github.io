@@ -150,10 +150,7 @@ router.get('/subcategory',async function (req, res) {
    
 });
 
-router.post('/:id/photos', authMiddleware, async function (req, res) {
-  if (isNaN(req.params.id) || !req.files.photo) {
-      return res.send(HTTPStatus.BAD_REQUEST).end();
-  }
+router.post('/:id/photos', async function (req, res) {
 
   const url = './public/images/' + req.files.photo.name;
   req.files.photo.mv(url, async function (error) {
@@ -164,7 +161,7 @@ router.post('/:id/photos', authMiddleware, async function (req, res) {
 
       const result = await connection.query('UPDATE products SET ? where productId=?', [
           {
-              thumbnailUrl: url
+            photoUrl: url
           },
           req.params.id]);
 
