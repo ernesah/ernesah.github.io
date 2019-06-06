@@ -1,0 +1,238 @@
+<div class="hero-wrap hero-bread" style="background-image: url('images/bg_6.jpg');">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-0 bread">Product Single</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+		
+		<section class="ftco-section bg-light">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-lg-6 mb-5 ftco-animate">
+            <div class="slideshow-container">
+
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="images/product-8.PNG" style="width:100%">
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/product-8.1.PNG" style="width:100%">
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/product-8.2.PNG" style="width:100%">
+              </div>
+              
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+              </div>
+              <br>
+              
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+              </div>
+              
+              <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+    			</div>
+    			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
+    				<h3>Illyrian Queen Pendant</h3>
+    				<p class="price"><span>€125.00</span></p>
+    				<p>The Illyrian Queen - Teuta, is among the most celebrated women in Albanian culture - heritage due to the fact that she was a brave woman with a strong personality - able to keep the Illyrian Kingdom under her control after the death of Illyrian King Agron in 230 BC. At that time the Illyrian fleets had a big impact in controlling the waters of Adriatic and ionian seas. During her rein the Illyrian fleet defeated the Achaean and Aetolian combined fleets in the battle of Paxos, capturing the Corcyra (Corfu) island in Ionian sea. She managed to control the trade routes between Italy-Greece-Albania triangle which forced Roman Republic to go to war with Illyrian Kingdom in 229 BC. </p>
+						<div class="row mt-4">
+							<div class="col-md-6">
+          	<p><button
+              class="snipcart-add-item"
+              data-item-id="100"
+                data-item-name="Illyrian Queen Pendant"
+                data-item-price="125"
+                data-item-weight="20"
+                data-item-url="https://fast-spire-12845.herokuapp.com"
+              data-item-description="The Illyrian Queen - Teuta, is among the most celebrated women in Albanian culture - heritage due to the fact that she was a brave woman with a strong personality - able to keep the Illyrian Kingdom under her control after the death of Illyrian King Agron in 230 BC."
+              data-item-image="images/product-8.PNG"
+              data-item-custom2-name="Select material"
+              data-item-custom2-options="Silver Premium|14k Gold Plated|18k Gold Plated|14k Rose Gold Plated|18k Rose Gold Plated"
+              data-item-max-quantity="100"
+              data-item-quantity-step="1">
+              Add to Cart</button></p>
+    			</div>
+    		</div>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+        <div class="container">
+          <div class="row justify-content-center mb-3 pb-3">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+              <h1 class="big">Products</h1>
+              <h2 class="mb-4">You must also like</h2>
+            </div>
+          </div>    		
+        </div>
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm col-md-6 col-lg-3 ftco-animate">
+                <div class="product">
+                  <a href="product-single.html" class="img-prod"><img class="img-fluid" src="images/product-12.PNG" alt="Colorlib Template">
+                  </a>
+                  <div class="text py-3 px-3">
+                    <h3><a href="#">Albanian Pride</a></h3>
+                    <div class="d-flex">
+                      <div class="pricing">
+                        <p class="price"><span>€120.00</span></p>
+                      </div>
+                    </div>
+                    <hr>
+                    <button
+                    class="snipcart-add-item"
+                    data-item-id="105"
+                    data-item-name="Albanian Pride"
+                    data-item-price="120.00"
+                    data-item-weight="20"
+                    data-item-url="/"
+                    data-item-description="The double-headed eagle is a very well-known symbol among European nations but Albanians have a unique and special connection to it. In the Albanian native language, they call themselves the son's of eagle, “Shqipetar.” They speak her (the eagle’s) language “Shqip”, which is derived from the word “Shqiponje” (which in Albanian means eagle).
+                    It is the most celebrated symbol among Albanians and part of the Albanian national flag: a black double-headed eagle on a red background. The shape of this ring portrays pride, strength and royalty."
+                    data-item-image="images/product-12.png"
+                    data-item-custom2-name="Select Material"
+                    data-item-custom2-options="14K Rose Gold|14K Gold|14K White Gold"
+                    data-item-custom3-name="Select Size"
+                    data-item-custom3-options="6|7|8|9"
+                    data-item-max-quantity="150"
+                    data-item-quantity-step="1"
+								>
+								Add to cart <i class="ion-ios-add ml-1"></i>
+							</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm col-md-6 col-lg-3 ftco-animate">
+                    <div class="product">
+                      <a href="product-single.html" class="img-prod"><img class="img-fluid" src="images/product-14.PNG" alt="Colorlib Template">
+                      </a>
+                      <div class="text py-3 px-3">
+                        <h3><a href="product-single.html">Bolo shield</a></h3>
+                        <div class="d-flex">
+                          <div class="pricing">
+                            <p class="price"><span class="mr-2 price-dc">€5,000.00</span><span class="price-sale">$3,500.00</span></p>
+                          </div>
+                        </div>
+                        <hr>
+                        <button
+                        class="snipcart-add-item"
+                        data-item-id="107"
+                        data-item-name="Bolo shield"
+                        data-item-price="5000.00"
+                        data-item-url="/"
+                        data-item-description="18k yellow gold snake chain with a citrine stone wrapped around with 18k yellow gold shield. The shield is adjustable so you can wear it multiple ways."
+                        data-item-image="images/product-14.PNG"
+                        data-item-max-quantity="100"
+                        data-item-quantity-step="1"
+								>
+								Add to cart <i class="ion-ios-add ml-1"></i>
+							</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm col-md-6 col-lg-3 ftco-animate">
+                      <div class="product">
+                        <a href="product-single.html" class="img-prod"><img class="img-fluid" src="images/product-6.PNG" alt="Colorlib Template">
+                        </a>
+                        <div class="text py-3 px-3">
+                          <h3><a href="product-single.html">Illyrian Helmet Ring</a></h3>
+                          <div class="d-flex">
+                            <div class="pricing">
+                              <p class="price"><span>€250.00</span></p>
+                            </div>
+                          </div>
+                          <hr>
+                          <button
+                          class="snipcart-add-item"
+								data-item-id="114"
+    						data-item-name="Illyrian Helmet Ring"
+								data-item-price="250.00"
+    						data-item-weight="20"
+    						data-item-url="/"
+								data-item-description="This ring is based on the Illyrian helmet with distinctive shapes and symbols. The Illyrians covered a vast territory, along the east of the Adriatic and Ionian Seas. Their success at sea forced Rome to rage wars against them until Illyria fell under Roman control 295 B.C. They were know as fierce warriors on land and excellent sailors at seas. The symbol of the ram (Dhija or DE - Dija) demonstrates their strength and cultural beliefs among tribes in the Illyrian Peninsula."
+								data-item-image="images/product-6.PNG"
+								data-item-custom2-name="Select Material"
+								data-item-custom2-options="Premium Silver|14K Gold|14K Rose Gold|14K White Gold"
+								data-item-custom3-name="Select size"
+								data-item-custom3-options="13|12|11.5|11|10|9"
+								data-item-max-quantity="100"
+								data-item-quantity-step="1"
+								>
+								Add to cart <i class="ion-ios-add ml-1"></i>
+							</button>
+                        </div>
+                      </div>
+                    </div>
+                  <div class="col-sm col-md-6 col-lg-3 ftco-animate">
+                      <div class="product">
+                        <a href="product-single.html" class="img-prod"><img class="img-fluid" src="images/product-5.PNG" alt="Colorlib Template">
+                        </a>
+                        <div class="text py-3 px-3">
+                          <h3><a href="#">Dardanian Goddess Necklace</a></h3>
+                          <div class="d-flex">
+                            <div class="pricing">
+                              <p class="price"><span>€85.00</span></p>
+                            </div>
+                          </div>
+                          <hr>
+                          <button								
+                          class="snipcart-add-item"
+                          data-item-id="113"
+                          data-item-name="Dardanian Goddess Necklace"
+                          data-item-price="85.00"
+                          data-item-url="/"
+                          data-item-description="The Dardanian Praying Goddess is one of those elements that predates history, yet the strong body language of the Goddess resembles the strong character on highland Albania and Kosova women in their determination, beauty and pride. "
+                          data-item-image="images/product-5.PNG"
+                          data-item-custom2-name="Select Color"
+                          data-item-custom2-options="Deep Red|Green|Turqoise"
+                          data-item-max-quantity="100"
+                          data-item-quantity-step="1"
+								>
+								Add to cart <i class="ion-ios-add ml-1"></i>
+							</button>
+                        </div>
+                      </div>
+                    </div>                   
+            </div>
+        </div>
+    </section>
