@@ -3,7 +3,7 @@ const exphbs = require('express-handlebars');
 var app = express();
 const productRoutes = require('./product.routes');
 const bodyParser = require('body-parser');
-const fileUpload = require('express-fileupload');
+
 
 //set port
 var port= process.env.PORT || 3000

@@ -3,7 +3,6 @@ const router = express.Router();
 const SqlProvider = require('./sql.provider');
 const HTTPStatus = require('http-status');
 var bodyParser = require('body-parser');
-const ProductService = require('./product.service');
 
 router.use(express.static('./views'))
 router.use( bodyParser.json() );       // to support JSON-encoded bodies
@@ -31,10 +30,11 @@ router.get('/products/:id', async function (req, res) {
     var sql = 'SELECT * FROM products where productId=?';
 
      var result = await connection.query(sql ,[productId])
-
-       res.end(JSON.stringify(result)) ;
+     if (error) throw error;
+     res.json(result) ;
   
 });
+
 
 
 router.delete('/products/:id',async function (req, res) {
@@ -85,7 +85,7 @@ router.post('/',  async function (req, res) {
         price: req.body.price,
         weight: req.body.weight,
         description:req.body.description,
-        photoId: req.body.Id
+        photoId: req.body.photoId
         
     }
 
@@ -154,14 +154,14 @@ router.post('/:id/photos', async function (req, res) {
 
   const url = './public/images/' + req.files.photo.name;
   req.files.photo.mv(url, async function (error) {
-      if (error) {
-          return res.send(HTTPStatus.INTERNAL_SERVER_ERROR).end();
+     if (error) {
+        return res.send(HTTPStatus.INTERNAL_SERVER_ERROR).end();
       }
       const connection = await SqlProvider.getConnection();
 
       const result = await connection.query('UPDATE products SET ? where productId=?', [
-          {
-            photoUrl: url
+         {
+           photoId: url
           },
           req.params.id]);
 
