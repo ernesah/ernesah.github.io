@@ -12,28 +12,29 @@
 		<section class="ftco-section bg-light">
     	<div class="container-fluid">
     		<div class="row">
+				{{#each results}}
     				<div class="col-sm col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-							<a href="#" class="img-prod"><img class="img-fluid" src="/public/images/product-1.JPG" alt="Colorlib Template">
-								<span class="status">Limited amount</span>
+							<a href="#" class="img-prod"><img class="img-fluid" src="/public/images/{{this.photoname}}" alt="Product Image">
+								<span class="status">{{this.sector}}</span>
     					</a>
     					<div class="text py-3 px-3">
-    						<h3><a href="#">Skanderbeg Helmet</a></h3>
+    						<h3><a href="#">{{this.name}}</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
-		    						<p class="price"><span>€270.00</span></p>
+		    						<p class="price"><span>{{this.price}}.00€</span></p>
 		    					</div>
 	    					</div>
 								<hr>
 								<button
 								class="snipcart-add-item"
-								data-item-id="109"
-    						data-item-name="Skanderbeg Helmet"
-								data-item-price="270.00"
-								data-item-width="18"
-    						data-item-url="/"
-								data-item-description="Available for everyone, our Skanderbeg helmet is an artistic replica representation of the original Skanderbeg's helmet preserved in Vienna, Kunsthistorisches Museum.This helmet has been reconstructed and adapted to be wearable by adults during any celebrations, festive events, family gatherings, cheering for our national teams, or merely an art adornment. Fabricated in plastic, cured in colors of gold, steel, and copper, it contains an adjustable velcro/cloth interior to comfort the head. The helmet has minor dents or marks to resemble a medieval helmet with minor paint imperfections."
-								data-item-image="/public/images/product-1.JPG"
+								data-item-id="{{productId}}"
+    							data-item-name="{{name}}"
+    							data-item-price="{{price}}"
+    							data-item-weight="{{weight}}"
+    							data-item-url="/products/{{id}}"
+								data-item-description="{{description}}"
+								data-item-image="/public/images/{{photoname}}"
 								data-item-max-quantity="10"
 								data-item-quantity-step="1"
 								>
@@ -42,7 +43,7 @@
     					</div>
     				</div>
                     </div>
-                    					
+                    	{{/each}}				
 					</div>
 			</div>
 		</div>

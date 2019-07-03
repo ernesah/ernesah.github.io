@@ -108,15 +108,16 @@
         </div>
         <div class="container-fluid">
         <div class="row">
+          {{#each results}}
             <div class="col-sm col-md-6 col-lg-3 ftco-animate">
                 <div class="product">
-                  <a href="product-single.html" class="img-prod"><img class="img-fluid" src="images/product-12.PNG" alt="Colorlib Template">
+                  <a href="product-single.html" class="img-prod"><img class="img-fluid" src="images/{{this.photoname}}" alt="Product Image">
                   </a>
                   <div class="text py-3 px-3">
-                    <h3><a href="#">Albanian Pride</a></h3>
+                    <h3><a href="#">{{this.name}}</a></h3>
                     <div class="d-flex">
                       <div class="pricing">
-                        <p class="price"><span>€120.00</span></p>
+                        <p class="price"><span>{{this.price}}.00€</span></p>
                       </div>
                     </div>
                     <hr>
@@ -142,7 +143,8 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm col-md-6 col-lg-3 ftco-animate">
+              {{/each}}
+             <!-- <div class="col-sm col-md-6 col-lg-3 ftco-animate">
                     <div class="product">
                       <a href="product-single.html" class="img-prod"><img class="img-fluid" src="images/product-14.PNG" alt="Colorlib Template">
                       </a>
@@ -232,7 +234,7 @@
 							</button>
                         </div>
                       </div>
-                    </div>                   
+                    </div>  -->                 
             </div>
         </div>
     </section>

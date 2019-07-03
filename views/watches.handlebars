@@ -12,27 +12,28 @@
 		<section class="ftco-section bg-light">
     	<div class="container-fluid">
     		<div class="row">
+				{{#each results}}
     				<div class="col-sm col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="product-single.html" class="img-prod"><img class="img-fluid" src="images/product-10.PNG" alt="Colorlib Template">
+    					<a href="product-single.html" class="img-prod"><img class="img-fluid" src="images/{{this.photoname}}" alt="Product Image">
     					</a>
     					<div class="text py-3 px-3">
-    						<h3><a href="#">Tourbillon régulateur</a></h3>
+    						<h3><a href="#">{{this.name}}</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
-		    						<p class="price"><span>€120.00</span></p>
+		    						<p class="price"><span>{{this.price}}.00€</span></p>
 		    					</div>
 	    					</div>
 								<hr>
 								<button
 								class="snipcart-add-item"
-								data-item-id="102"
-    						data-item-name="Tourbillon régulateur Watch"
-								data-item-price="79.99"
-    						data-item-weight="20"
-    						data-item-url="/"
-								data-item-description="Men Watch"
-								data-item-image="images/product-10.PNG"
+								data-item-id="{{productId}}"
+    							data-item-name="{{name}}"
+    							data-item-price="{{price}}"
+    							data-item-weight="{{weight}}"
+    							data-item-url="https://fast-spire-12845.herokuapp.com/product-single.html"
+								data-item-description="{{description}}"
+								data-item-image="/public/images/{{photoname}}"
 								data-item-max-quantity="100"
 								data-item-quantity-step="1"
 								>
@@ -41,96 +42,7 @@
     					</div>
     				</div>
 					</div>
-					<div class="col-sm col-md-6 col-lg-3 ftco-animate">
-    				<div class="product">
-							<a href="product-single.html" class="img-prod"><img class="img-fluid" src="images/product-2.PNG" alt="Colorlib Template">
-								<span class="status">New Arrival</span>
-    					</a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">Akrivia Watch</a></h3>
-    						<div class="d-flex">
-    							<div class="pricing">
-		    						<p class="price"><span>€150.00</span></p>
-		    					</div>
-	    					</div>
-								<hr>
-								<button
-								class="snipcart-add-item"
-								data-item-id="108"
-    						data-item-name="Akrivia Watch"
-								data-item-price="150.00"
-    						data-item-weight="20"
-    						data-item-url="/"
-								data-item-description="Men Watch"
-								data-item-image="images/product-2.PNG"
-								data-item-max-quantity="100"
-								data-item-quantity-step="1"
-								>
-								Add to cart <i class="ion-ios-add ml-1"></i>
-							</button>
-    					</div>
-    				</div>
-					</div>
-					<div class="col-sm col-md-6 col-lg-3 ftco-animate">
-    				<div class="product">
-    					<a href="product-single.html" class="img-prod"><img class="img-fluid" src="images/product-16.PNG" alt="Colorlib Template">
-    					</a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">Tourbillon Hour Minutes</a></h3>
-    						<div class="d-flex">
-    							<div class="pricing">
-		    						<p class="price"><span>€360.00</span></p>
-		    					</div>
-	    					</div>
-								<hr>
-								<button
-								class="snipcart-add-item"
-								data-item-id="111"
-    						data-item-name="Tourbillon Hour Minutes"
-								data-item-price="360.00"
-    						data-item-url="/"
-								data-item-description="Men Watch"
-								data-item-image="images/product-16.PNG"
-								data-item-custom2-name="Select Color"
-								data-item-custom2-options="Gold|Blue|Black"
-								data-item-max-quantity="100"
-								data-item-quantity-step="1"
-								>
-								Add to cart <i class="ion-ios-add ml-1"></i>
-							</button>
-    					</div>
-    				</div>
-					</div>
-					<div class="col-sm col-md-6 col-lg-3 ftco-animate">
-    				<div class="product">
-    					<a href="product-single.html" class="img-prod"><img class="img-fluid" src="images/product-19.PNG" alt="Colorlib Template">
-    					</a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">Tourbillon régulateur</a></h3>
-    						<div class="d-flex">
-    							<div class="pricing">
-		    						<p class="price"><span>€120.00</span></p>
-		    					</div>
-	    					</div>
-								<hr>
-								<button
-								class="snipcart-add-item"
-								data-item-id="118"
-    						data-item-name="Tourbillon régulateur Watch"
-								data-item-price="79.99"
-    						data-item-weight="20"
-    						data-item-url="/"
-								data-item-description="Men Watch"
-								data-item-image="images/product-19.PNG"
-								data-item-max-quantity="100"
-								data-item-quantity-step="1"
-								>
-								Add to cart <i class="ion-ios-add ml-1"></i>
-							</button>
-    					</div>
-    				</div>
-					</div>
-					
+					{{/each}}
 					</div>
 			</div>
 		</div>
