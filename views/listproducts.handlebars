@@ -1,0 +1,74 @@
+<div class="hero-wrap hero-bread" style="background-image: url('/public/images/bg_6.jpg');">
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-center justify-content-center">
+      <div class="col-md-9 ftco-animate text-center">
+        <h1 class="mb-0 bread">Edit products</h1>
+      </div>
+    </div>
+  </div>
+</div>
+          <div class="row block-9">
+            <div class="col-md-6 order-md-last d-flex">
+              <font size="1">
+                                    <table class="table table-borderless table-data3 .table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Product Name</th>
+                                                <th>Category</th>
+                                                <th>Subategory</th>
+                                                <th>Price</th>
+                                                <th>Weight</th> 
+                                                <th>Description</th>
+                                                <th>Photo</th>
+                                                <th>Sector</th>
+                                                <th>Color</th>
+                                                <th>Material</th>
+                                                <th>Max Quantity</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+            {{#each results}}
+            <tr>
+              
+                <td>{{this.name}}</td>
+                <td>{{this.categoryId}}</td>
+                <td>{{this.subcategoryId}}</td>
+                <td>{{this.price}}</td>
+                <td>{{this.weight}}</td> 
+                <td>{{this.description}}</td>
+                <td>{{this.photourl}}</td>
+                <td>{{this.sector}}</td>
+                <td>{{this.color}}</td>
+                <td>{{this.materials}}</td>                   
+                <td>{{this.maxquantity}}</td>
+                <td>
+                    <div class="table-data-feature">
+
+
+                        <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" >
+                            <a href="/edit/{{this.productId}}"> Edit <i class="zmdi zmdi-edit"></i></a>
+                        </button>
+              </td>
+              <td>
+                        <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
+                          <a href="delete/{{this.productId}}"> Delete<i class="zmdi zmdi-delete"></i></a>
+                        </button>
+                      </td>
+                    </div>
+                </td>
+               {{/each}}
+            </tr>
+            
+        </tbody>
+        </font>
+                                    </table>
+                                    </font>
+                                </div>
+                              
+                                </div>
+                                 
+                                
+                
+                                
+
+                               

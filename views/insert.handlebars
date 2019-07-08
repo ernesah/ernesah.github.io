@@ -1,0 +1,46 @@
+
+    <div class="hero-wrap hero-bread" style="background-image: url('/public/images/bg_6.jpg');">
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-center justify-content-center">
+      <div class="col-md-9 ftco-animate text-center">
+        <h1 class="mb-0 bread">Insert new products</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="ftco-section contact-section bg-light">
+        <div class="container">
+          <div class="row block-9">
+            <div class="col-md-6 order-md-last d-flex">
+              <form action="/api/products/test" class="bg-white p-5 contact-form" method="post" enctype="multipart/form-data" >
+               <div class="form-group">Product Name: <input type="text" class="form-control" name="name1" required/></div>
+              <div class="form-group">Price: <input type="text" class="form-control" name="price1" required /></div>
+              <div class="form-group">Weight: <input type="number" class="form-control" name="weight1" required /></div>
+              <div class="form-group">Description: <input id="pershkrimi" type="text" class="form-control" name="description1" required /></div>
+              <div class="form-group">Category: <select class="form-control" name="category1" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select></div>
+              <div class="form-group">Subcategory: <select class="form-control" name="subcategory1" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                </select></div>
+                <div class="form-group">Color: <input type="text" class="form-control" name="color1" /></div>
+                <div class="form-group">Material: <input type="text" class="form-control" name="material1" /></div>
+                <div class="form-group">Quantity: <input type="number" class="form-control" name="quantity1" /></div>
+                <div class="form-group">Sector: <input type="text" class="form-control" name="sector1" /></div>
+                <div class="form-group">Photo: <input type="file" class="form-control" name="photo1" required /></div>
+                <div class="form-group"><button id="butoni" class="btn btn-primary py-3 px-5">Insert</button></div>
+</form>
+</div>
+          </div>
+        </div>
+</section>

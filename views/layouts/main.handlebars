@@ -129,75 +129,38 @@ img {vertical-align: middle;}
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="index" class="nav-link">Home</a></li>
 	          <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="3" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
             
               <div class="dropdown-menu" aria-labelledby="dropdown04">
-                <a class="dropdown-item" href="shop">All Products</a>-->
-                {{#each Categories}}
-                <a class="dropdown-item" href="#">{{this.category}} </a>
-                {{/each}}
+                <a class="dropdown-item" href="products">All Products</a>
+                <a class="dropdown-item" href="jewelry">Jewelry</a>
+                <a class="dropdown-item" href="watches">Watches</a>
+                <a class="dropdown-item" href="glasses">Glasses</a>
+                <a class="dropdown-item" href="helmets">Helmets</a>
               </div>
-
             </li>
-	          <li class="nav-item"><a href="about" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta cta-colored snipcart-checkout"><a href="cart" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-
+	          <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+            <li class="nav-item cta cta-colored snipcart-checkout"><a href="cart" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link cta cta-colored dropdown-toggle" href="3" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              <a href="#" class="dropdown-item snipcart-user-profile">User profile</a>
+              <a href="#" class="dropdown-item snipcart-edit-profile">Edit profile</a> 
+              <a href="/list">Edit products</a> 
+              <a href="/insert">Insert products</a> 
+              <a href="#" class="dropdown-item snipcart-user-logout">Logout</a>
+              </div>
+            </li>
 	        </ul>
+			</div>
 	      </div>
-	    </div>
 	  </nav>
     <!-- END nav -->
 		
 		{{{body}}}
-
-    <section class="ftco-section bg-light ftco-services">
-    	<div class="container">
-    		<div class="row justify-content-center mb-3 pb-3">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-            <h1 class="big">Services</h1>
-            <h2>We want you to express yourself</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 text-center d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services">
-              <div class="icon d-flex justify-content-center align-items-center mb-4">
-            		<span class="flaticon-002-recommended"></span>
-              </div>
-              <div class="media-body">
-                <h3 class="heading">Refund Policy</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-4 text-center d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services">
-              <div class="icon d-flex justify-content-center align-items-center mb-4">
-            		<span class="flaticon-001-box"></span>
-              </div>
-              <div class="media-body">
-                <h3 class="heading">Premium Packaging</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>    
-          </div>
-          <div class="col-md-4 text-center d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services">
-              <div class="icon d-flex justify-content-center align-items-center mb-4">
-            		<span class="flaticon-003-medal"></span>
-              </div>
-              <div class="media-body">
-                <h3 class="heading">Superior Quality</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-        </div>
-    	</div>
-    </section>
 		
 		<section class="ftco-section-parallax">
       <div class="parallax-img d-flex align-items-center">
@@ -245,6 +208,7 @@ img {vertical-align: middle;}
               </ul>
             </div>
           </div>
+          
           <div class="col-md-4">
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Help</h2>

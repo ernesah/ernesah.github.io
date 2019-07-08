@@ -2318,6 +2318,24 @@ fieldset:disabled a.btn {
       -webkit-box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
       box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5); }
 
+      .size-101 {
+        min-width: 161px;
+        height: 46px;
+      }
+.hov-cl0:hover {color: #fff;}
+.hov-bg1:hover {background-color: #efa2a9;}
+.bor1 {
+  border-radius: 23px;
+}
+.p-t-70 {padding-top: 70px;}
+.p-b-20  {padding-bottom: 20px;}
+.hov-btn1:hover {
+  border-color: #222;
+  background-color: #222;
+  color: #fff;
+}
+.m-b-5 {margin-bottom: 5px;}
+.p-lr-15-xl {padding-left: 15px; padding-right: 15px;}
 .btn-outline-warning {
   color: #ffc107;
   background-color: transparent;

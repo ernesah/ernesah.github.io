@@ -5,11 +5,11 @@ let conn = null;
 class SqlProvider {
   static async getConnection() {
     const config = {
-        host: "localhost",
-        port: "3307",
-        user: "root",
-        password: "",
-        database: 'e-commerce'
+        host: "remotemysql.com",
+        port: "3306",
+        user: "DBrUnDLuiy",
+        password: "7pANwtE49K",
+        database: 'DBrUnDLuiy'
     };
     if (conn) {
       return conn

@@ -98,6 +98,19 @@
   -ms-user-select: none;
   user-select: none;
 }
+.trans-04 {
+	-webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.flex-c-m {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+}
 .datepicker td,
 .datepicker th {
   text-align: center;

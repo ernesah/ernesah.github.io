@@ -12,11 +12,12 @@
 		
 		<section class="ftco-section bg-light">
     	<div class="container-fluid">
+			<p class="breadcrumbs"><span><a href="jewelry/necklaces">Necklaces</a> |<a href="jewelry/bracelets"> Bracelets </a>|<a href="jewelry/earrings"> Earrings</a> |<a href="jewelry/rings"> Rings</a></span></p>
     		<div class="row">
 				{{#each results}}
     			<div class="col-sm col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="product-single" class="img-prod"><img class="img-fluid" src="/public/images/{{this.photoname}}" alt="Product Image"></a>
+    					<a href="/api/{{this.productId}}" class="img-prod"><img class="img-fluid" src="/public/images/{{this.photoname}}" alt="Product Image"></a>
     					<div class="text py-3 px-3">
     						<h3><a href="product-single">{{this.name}}</a></h3>
     						<div class="d-flex">
@@ -31,12 +32,14 @@
     							data-item-name="{{name}}"
     							data-item-price="{{price}}"
     							data-item-weight="{{weight}}"
-    							data-item-url="https://fast-spire-12845.herokuapp.com/product-single.html"
+    							data-item-url="/{{productId}}"
 								data-item-description="{{description}}"
 								data-item-image="/public/images/{{photoname}}"
-								data-item-custom2-name="Select material"
-								data-item-custom2-options="Silver Premium|14k Gold Plated|18k Gold Plated|14k Rose Gold Plated|18k Rose Gold Plated"
-								data-item-max-quantity="100"
+								data-item-custom2-name="Select color"
+								data-item-custom2-options="{{color}}"
+								data-item-custom3-name="Select material"
+								data-item-custom3-options="{{materials}}"
+								data-item-max-quantity="{{maxquantity}}"
 								data-item-quantity-step="1"
 								>
 								Add to cart <i class="ion-ios-add ml-1"></i>
