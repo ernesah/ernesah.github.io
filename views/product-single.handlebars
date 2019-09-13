@@ -1,146 +1,142 @@
 <div class="hero-wrap hero-bread" style="background-image: url('images/bg_6.jpg');">
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center">
-          <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-0 bread">Product Single</h1>
-          </div>
-        </div>
-      </div>
+<div class="container">
+  <div class="row no-gutters slider-text align-items-center justify-content-center">
+    <div class="col-md-9 ftco-animate text-center">
+      <h1 class="mb-0 bread">Product Single</h1>
     </div>
-		
-		<section class="ftco-section bg-light">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-lg-6 mb-5 ftco-animate">
-            <div class="slideshow-container">
-              {{#each results2}}
-              <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="images/{{this.photoname}}.PNG" style="width:100%">
-              </div>
-              
-              <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
-                <img src="images/{{this.photoname}}.JPG" style="width:100%">
-              </div>
-              
-              <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
-                <img src="images/{{this.photoname}}.JPEG" style="width:100%">
-              </div>
+  </div>
+</div>
+</div>
 
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
-              {{/each}}
-              <script>
-                var slideIndex = 1;
-                showSlides(slideIndex);
+<section class="ftco-section bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mb-5 ftco-animate">
+        <div class="slideshow-container">
+          {{#each results2}}
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/{{this.photoname}}.PNG" style="width:100%">
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/{{this.photoname}}.JPG" style="width:100%">
+          </div>
+          <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="images/{{this.photoname}}.JPEG" style="width:100%">
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          {{/each}}
+          <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+              }
                 
-                function plusSlides(n) {
-                  showSlides(slideIndex += n);
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+              }
+                
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
                 }
-                
-                function currentSlide(n) {
-                  showSlides(slideIndex = n);
-                }
-                
-                function showSlides(n) {
-                  var i;
-                  var slides = document.getElementsByClassName("mySlides");
-                  var dots = document.getElementsByClassName("dot");
-                  if (n > slides.length) {slideIndex = 1}    
-                  if (n < 1) {slideIndex = slides.length}
-                  for (i = 0; i < slides.length; i++) {
-                      slides[i].style.display = "none";  
-                  }
-                  for (i = 0; i < dots.length; i++) {
-                      dots[i].className = dots[i].className.replace(" active", "");
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
                   }
                   slides[slideIndex-1].style.display = "block";  
                   dots[slideIndex-1].className += " active";
-                }
-                </script>               
-    			</div>
-          </div>
-          {{#each results}}
-    			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
-    				<h3>{{this.name}}</h3>
-    				<p class="price"><span>{{this.price}}.00€</span></p>
-    				<p>{{this.description}}</p>
-						<div class="row mt-4">
-							<div class="col-md-6">
-          	<p><button
-								class="snipcart-add-item"
-								data-item-id="{{productId}}"
-    						data-item-name="{{name}}"
-    						data-item-price="{{price}}"
-    						data-item-weight="{{weight}}"
-    						data-item-url="/{{productId}}"
-								data-item-description="{{description}}"
-								data-item-image="/public/images/{{photoname}}"
-                data-item-custom2-name="Select color"
-								data-item-custom2-options="{{color}}"
-								data-item-custom3-name="Select material"
-								data-item-custom3-options="{{materials}}"
-								data-item-max-quantity="{{maxquantity}}"
-								data-item-quantity-step="1"
-								>
-              Add to Cart</button></p>
+                  }
+                  </script>               
+        </div>
+      </div>
+      {{#each results}}
+      <div class="col-lg-6 product-details pl-md-5 ftco-animate">
+        <h3>{{this.name}}</h3>
+        <p class="price"><span>{{this.price}}.00€</span></p>
+        <p>{{this.description}}</p>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <p><button 
+            class="snipcart-add-item"
+						data-item-id="{{productId}}"
+    				data-item-name="{{name}}"
+    				data-item-price="{{price}}"
+    				data-item-weight="{{weight}}"
+    				data-item-url="/{{productId}}"
+						data-item-description="{{description}}"
+						data-item-image="/public/images/{{photoname}}"
+            data-item-custom2-name="Select color"
+						data-item-custom2-options="{{color}}"
+						data-item-custom3-name="Select material"
+						data-item-custom3-options="{{materials}}"
+						data-item-max-quantity="{{maxquantity}}"
+						data-item-quantity-step="1">
+            Add to Cart
+            </button></p>
     			</div>
     		</div>
       </div>
       {{/each}}       
-    		</div>
-        </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    
-    <section class="ftco-section bg-light">
-        <div class="container">
-          <div class="row justify-content-center mb-3 pb-3">
-            <div class="col-md-12 heading-section text-center ftco-animate">
-              <h1 class="big">Products</h1>
-              <h2 class="mb-4">You must also like</h2>
+<section class="ftco-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center mb-3 pb-3">
+      <div class="col-md-12 heading-section text-center ftco-animate">
+        <h1 class="big">Products</h1>
+        <h2 class="mb-4">You must also like</h2>
+      </div>
+    </div>    		
+  </div>
+<div class="container-fluid">
+  <div class="row">
+    {{#each results1}}
+    <div class="col-sm col-md-6 col-lg-3 ftco-animate">
+      <div class="product">
+        <a href="/api/{{this.productId}}" class="img-prod"><img class="img-fluid" src="images/{{this.photoname}}" alt="Product Image"></a>
+        <div class="text py-3 px-3">
+          <h3><a href="#">{{this.name}}</a></h3>
+          <div class="d-flex">
+            <div class="pricing">
+              <p class="price"><span>{{this.price}}.00€</span></p>
             </div>
-          </div>    		
+          </div>
+          <hr>
+          <button
+          class="snipcart-add-item"
+					data-item-id="{{productId}}"
+    			data-item-name="{{name}}"
+    			data-item-price="{{price}}"
+    			data-item-weight="{{weight}}"
+    			data-item-url="/products/{{productId}}"
+					data-item-description="{{description}}"
+					data-item-image="/public/images/{{photoname}}"
+					data-item-custom2-name="Select material"
+					data-item-custom2-options="{{this.materials}}"
+					data-item-max-quantity="{{this.maxquantity}}"
+					data-item-quantity-step="1"
+          >
+          Add to cart <i class="ion-ios-add ml-1"></i>
+          </button>
         </div>
-        <div class="container-fluid">
-        <div class="row">
-          {{#each results1}}
-            <div class="col-sm col-md-6 col-lg-3 ftco-animate">
-                <div class="product">
-                  <a href="/api/{{this.productId}}" class="img-prod"><img class="img-fluid" src="images/{{this.photoname}}" alt="Product Image">
-                  </a>
-                  <div class="text py-3 px-3">
-                    <h3><a href="#">{{this.name}}</a></h3>
-                    <div class="d-flex">
-                      <div class="pricing">
-                        <p class="price"><span>{{this.price}}.00€</span></p>
-                      </div>
-                    </div>
-                    <hr>
-                    <button
-								class="snipcart-add-item"
-								data-item-id="{{productId}}"
-    						data-item-name="{{name}}"
-    						data-item-price="{{price}}"
-    						data-item-weight="{{weight}}"
-    						data-item-url="/products/{{productId}}"
-								data-item-description="{{description}}"
-								data-item-image="/public/images/{{photoname}}"
-								data-item-custom2-name="Select material"
-								data-item-custom2-options="{{this.materials}}"
-								data-item-max-quantity="{{this.maxquantity}}"
-								data-item-quantity-step="1"
-								>
-								Add to cart <i class="ion-ios-add ml-1"></i>
-							</button>
-                  </div>
-                </div>
-              </div>  
-              {{/each}}            
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
+    {{/each}}            
+    </div>
+  </div>
+</section>
     
    

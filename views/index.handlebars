@@ -1,92 +1,86 @@
-	
-		<div class="hero-wrap js-fullheight" style="background-image: url('/public/images/bg_1.jpg');">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-          <div class="col-md-11 ftco-animate text-center">
-						<br><br><br><br><br><br>
-            <h2><span>Accessories make the difference</span></h2>
-					</div>
-          <div class="mouse">
-						<a href="#" class="mouse-icon">
-							<div class="mouse-wheel"><span class="ion-ios-arrow-down"></span></div>
-						</a>
-					</div>
-        </div>
-      </div>
+<div class="hero-wrap js-fullheight" style="background-image: url('/public/images/bg_1.jpg');">
+<div class="overlay"></div>
+<div class="container">
+  <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+    <div class="col-md-11 ftco-animate text-center">
+      <br><br><br><br><br><br>
+      <h2><span>Accessories make the difference</span></h2>
     </div>
-    <div class="goto-here"></div>
-    <div>
-    <section class="ftco-section ftco-product">
-    	<div class="container">
-    		<div class="row justify-content-center mb-3 pb-3">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big">Summer Sale</h1>
-            <h2 class="mb-4">Summer Sale</h2>
-          </div>
-        </div>
-    		<div class="row">
-    			<div class="col-md-12">
-    				<div class="product-slider owl-carousel ftco-animate">
-						{{#each result1}}
-    					<div class="item">
-		    				<div class="product">
-		    					<a href="/api/{{this.productId}}" class="img-prod"><img class="img-fluid" src="/public/images/{{this.photoname}}" alt="Product Image">
-		    					</a>
-		    					<div class="text pt-3 px-3">
-		    						<h3><a href="#">{{this.name}}</a></h3>
-		    						<div class="d-flex">
-		    							<div class="pricing">
-											<span class="price-sale">{{this.price}}.00€</span>
-			    						</div>
-		    						</div>
-		    					</div>
-		    				</div>
-	    				</div>
-						{{/each}}	    				
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </section>
+    <div class="mouse">
+      <a href="#" class="mouse-icon">
+        <div class="mouse-wheel"><span class="ion-ios-arrow-down"></span></div>
+      </a>
     </div>
-
-    
-    <section class="ftco-section ftco-product">
-        <div class="container">
-          <div class="row justify-content-center mb-3 pb-3">
-            <div class="col-md-12 heading-section text-center ftco-animate">
-              <h1 class="big">New Arrivals</h1>
-              <h2 class="mb-4">New Arrivals</h2>
-            </div>
+  </div>
+</div>
+</div>
+<div class="goto-here"></div>
+<div>
+  <section class="ftco-section ftco-product">
+    <div class="container">
+      <div class="row justify-content-center mb-3 pb-3">
+        <div class="col-md-12 heading-section text-center ftco-animate">
+          <h1 class="big">Summer Sale</h1>
+          <h2 class="mb-4">Summer Sale</h2>
           </div>
-          
-  <div>
+          </div>
           <div class="row">
             <div class="col-md-12">
               <div class="product-slider owl-carousel ftco-animate">
-				  {{#each result}}
+                {{#each result1}}
                 <div class="item">
                   <div class="product">
-					  
-                    <a href="/api/{{this.productId}}" class="img-prod"><img class="img-fluid" src="/public/images/{{this.photoname}}" alt="Product Image">
-                    </a>
+                    <a href="/api/{{this.productId}}" class="img-prod"><img class="img-fluid" src="/public/images/{{this.photoname}}" alt="Product Image"></a>
                     <div class="text pt-3 px-3">
-                      <h3><a href="/api/">{{this.name}}</a></h3>
+                      <h3><a href="#">{{this.name}}</a></h3>
                       <div class="d-flex">
                         <div class="pricing">
-                        <span class="price-sale">{{this.price}}.00€</span>
+                          <span class="price-sale">{{this.price}}.00€</span>
                         </div>
                       </div>
-                    </div>					
-                  </div>				  
+		    					  </div>
+		    				  </div>
                 </div>
-				{{/each}}
-              </div>
-            </div>           
+                {{/each}}	    				
+    				  </div>
+    			  </div>
+    		  </div>
+    </div>
+  </section>
+</div>
+
+<section class="ftco-section ftco-product">
+  <div class="container">
+    <div class="row justify-content-center mb-3 pb-3">
+      <div class="col-md-12 heading-section text-center ftco-animate">
+        <h1 class="big">New Arrivals</h1>
+        <h2 class="mb-4">New Arrivals</h2>
+      </div>
+    </div>
+    <div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="product-slider owl-carousel ftco-animate">
+            {{#each result}}
+            <div class="item">
+              <div class="product">
+                <a href="/api/{{this.productId}}" class="img-prod"><img class="img-fluid" src="/public/images/{{this.photoname}}" alt="Product Image"></a>
+                <div class="text pt-3 px-3">
+                  <h3><a href="/api/">{{this.name}}</a></h3>
+                  <div class="d-flex">
+                    <div class="pricing">
+                      <span class="price-sale">{{this.price}}.00€</span>
+                    </div>
+                  </div>
+                </div>					
+              </div>				  
+            </div>
+            {{/each}}
           </div>
-          </div>
-        </div>
-      </section>
+        </div>           
+      </div>
+    </div>
+  </div>
+</section>
     
   
