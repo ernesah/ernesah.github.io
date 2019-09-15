@@ -4,7 +4,6 @@ const SqlProvider = require('./sql.provider');
 const HTTPStatus = require('http-status');
 const path=require("path");
 var bodyParser = require('body-parser');
-//const ProductService = require('./product.service');
 const authMiddleware = require('./snipcartAuth.middleware');
 const fs = require('fs');
 
@@ -151,6 +150,27 @@ router.get('/helmets',async function (req, res) {
    res.json(results);
 });
 
+router.get("/listproducts",async function(req,res){
+  const connection = await SqlProvider.getConnection();
+   connection.query('SELECT * FROM products', function (error, results, fields) {
+    if (error) throw error;
+    res.render("listproducts", { results: results });
+    });
+    res.json(results);
+});
+
+router.get("/insert",function(req,res){
+  res.render("insert");
+});
+
+router.get("/about",function(req,res){
+  res.render("about");
+});
+
+router.get("/contact",function(req,res){
+  res.render("contact");
+});
+
 router.get('/:id', async function (req, res) {
  
   const connection = await SqlProvider.getConnection();
@@ -164,8 +184,6 @@ router.get('/:id', async function (req, res) {
     });
   });
 });
-  
-
 });
 
 router.post('/', authMiddleware ,async function (req, res) {
@@ -198,17 +216,6 @@ router.post('/', authMiddleware ,async function (req, res) {
         return res.send(HTTPStatus.OK).end();
     }
 );
-
-router.delete('/delete/:id',async function (req, res) {
-
-  const connection = await SqlProvider.getConnection();
-  var productId= req.params.id;
-  connection.query('DELETE FROM `products` WHERE `productId`='+productId+'', function (error, results) {
-   if (error) throw error;
-   console.log("Deleted!!")
-   res.end('Record has been deleted!');
- });
-});
 
 router.put('/:id', authMiddleware,async function (req, res) {
     
@@ -258,8 +265,6 @@ router.put('/:id', authMiddleware,async function (req, res) {
     console.log(req.body);
     return res.sendStatus(HTTPStatus.OK).end();
   });
-
-  
 
 router.use(express.static('public'));
 

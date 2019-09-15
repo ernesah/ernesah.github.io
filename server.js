@@ -15,12 +15,12 @@ app.use(bodyParser.urlencoded({  //to support URL-encoded bodies
 //set port
 var port= process.env.PORT || 3000
 
-app.use('/api', productRoutes);
+app.use('/', productRoutes);
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 app.use(express.json()); // add HTTP body to req.body
-app.use('/public/', express.static('public')); // sherben files static
+app.use('/public/', express.static('public')); // sherben static files
 
 const multer = require('multer');
 
@@ -61,8 +61,8 @@ app.post("/test", upload.single('photo1') ,authMiddleware ,async function(req, r
       console.log("Insertimi u krye me sukses")
       res.end()
       
-   })
-    ;})
+   });
+  })
 
     app.post("edit/:id" , upload.single('photo1') , async function (req, res) {
 
@@ -94,23 +94,6 @@ app.post("/test", upload.single('photo1') ,authMiddleware ,async function(req, r
        res.redirect("listproducts");
       });
     });
-    
-    
-
-app.get("/list",async function(req,res){
-      const connection = await SqlProvider.getConnection();
-    
-      await connection.query('SELECT * FROM products', function (error, results, fields) {
-        if (error) throw error;
-    
-        res.render("listproducts", { results: results });
-      
-        });
-})  
-
-app.get("/insert",function(req,res){
-    res.render("insert");
-})
 
 app.get('/edit/:id',async function (req, res) {
   var productId= req.params.id;
@@ -119,20 +102,28 @@ app.get('/edit/:id',async function (req, res) {
      if(error) throw error;
      res.render("edit", { results: results });
    });
-
 });
 
-app.get("/about",function(req,res){
-  res.render("about");
-})
+app.get('/delete/:id',async function (req, res) {
+  var productId= req.params.id;
+  const connection = await SqlProvider.getConnection();
+    await connection.query('DELETE FROM `products` WHERE `productId`='+productId+'', function (error, results, fields) {
+      if (error) throw error;
+      console.log("Deleted!!")
+      res.end('Record has been deleted!');
+    });
+});
 
-app.get("/contact",function(req,res){
-  res.render("contact");
+app.delete('/delete/:id',async function (req, res) {
+  var productId= req.params.id;
+  const connection = await SqlProvider.getConnection();
+  connection.query('DELETE FROM `products` WHERE `productId`='+productId+'', function (error, results) {
+   if (error) throw error;
+   console.log("Deleted!!")
+   res.end('Record has been deleted!');
+ });
 });
 
 app.listen(port, function() {
   console.log('App listening on port 3000');
 });
-
-    
-

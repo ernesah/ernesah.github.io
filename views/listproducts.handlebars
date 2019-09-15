@@ -9,10 +9,10 @@
 </div>
 <div class="row block-9">
   <div class="col-md-6 order-md-last d-flex">
-    <font size="1">
-      <table class="table table-borderless table-data3 .table-striped">
+    <font size="2">
+      <table class="table table-borderless table-data3 .table-striped" align="center">
         <thead>
-          <tr>
+          <tr style="font-style: italic">
             <th>Product Name</th>
             <th>Category</th>
             <th>Subategory</th>
@@ -48,7 +48,7 @@
             </td>
             <td>
               <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
-                <a href="delete/{{this.productId}}"> Delete<i class="zmdi zmdi-delete"></i></a>
+                <a href="/delete/{{this.productId}}"> Delete<i class="zmdi zmdi-delete"></i></a>
               </button>
             </td>
             {{/each}}

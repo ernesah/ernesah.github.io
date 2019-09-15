@@ -11,11 +11,12 @@
 
 <section class="ftco-section bg-light">
 	<div class="container-fluid">
-		<p class="breadcrumbs"><span><a href="jewelry/necklaces">Necklaces</a> |<a href="jewelry/bracelets"> Bracelets </a>|<a href="jewelry/earrings"> Earrings</a> |<a href="jewelry/rings"> Rings</a></span></p>
+		<p class="breadcrumbs"><span><a href="/jewelry/necklaces">Necklaces</a> |<a href="/jewelry/bracelets"> Bracelets </a>|<a href="/jewelry/earrings"> Earrings</a> |<a href="/jewelry/rings"> Rings</a></span></p>
 		<div class="row">
 			{{#each results}}
 			<div class="col-sm col-md-6 col-lg-3 ftco-animate">
-				<a href="/api/{{this.productId}}" class="img-prod"><img class="img-fluid" src="/public/images/{{this.photoname}}" alt="Product Image"></a>
+				<div class="product">
+				<a href="/{{this.productId}}" class="img-prod"><img class="img-fluid" src="/public/images/{{this.photoname}}" alt="Product Image"></a>
 				<div class="text py-3 px-3">
 					<h3><a href="product-single">{{this.name}}</a></h3>
 					<div class="d-flex">
@@ -45,6 +46,7 @@
     		</div>
     	</div>
 		{{/each}}
+		</div>
 	</div>
 </section>
   

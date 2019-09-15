@@ -7,9 +7,9 @@ class SqlProvider {
     const config = {
         host: "remotemysql.com",
         port: "3306",
-        user: "DBrUnDLuiy",
-        password: "7pANwtE49K",
-        database: 'DBrUnDLuiy'
+        user: "UfefPd1mk5",
+        password: "KfR4ufcbt5",
+        database: 'UfefPd1mk5'
     };
     if (conn) {
       return conn

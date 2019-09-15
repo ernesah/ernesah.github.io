@@ -14,12 +14,12 @@
 			{{#each results}}
 			<div class="col-sm col-md-6 col-lg-3 ftco-animate">
 				<div class="product">
-					<a href="/api/{{this.productId}}" class="img-prod"><img class="img-fluid" src="/public/images/{{this.photoname}}" alt="Colorlib Template"></a>
+					<a href="/{{this.productId}}" class="img-prod"><img class="img-fluid" src="/public/images/{{this.photoname}}" alt="Colorlib Template"></a>
 					<div class="text py-3 px-3">
 						<h3><a href="#">{{this.name}}</a></h3>
 						<div class="d-flex">
 							<div class="pricing">
-								<p class="price"><span>{{this.price}}</span></p>
+								<p class="price"><span>{{this.price}}.00€</span></p>
 		    				</div>
 	    				</div>
 						<hr>
