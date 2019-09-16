@@ -33,11 +33,11 @@ const upload = multer({ dest: __dirname + '/public/images' },
 
 //routes
 
-app.post("/test", upload.single('photo1') ,authMiddleware ,async function(req, res){
+app.post("/test", upload.single('photo1'), authMiddleware, async function(req, res){
 
     const connection = await SqlProvider.getConnection();
 
-    var name = req.body.name1
+    var name = req.body.name1;
     var photourl = req.file.path;
     var img = fs.readFileSync(req.file.path); 
     var category = req.body.category1
